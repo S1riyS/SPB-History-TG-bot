@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "spb-history-tg-bot"
+version = "0.1.0"
+description = "Telegram bot for excursions around St. Petersburg"
+authors = ["S1riyS <kirill.ankudinov.94@mail.ru>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+aiogram = "3.1.1"
+python-dotenv = "^1.0.0"
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.5.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
