@@ -4,6 +4,9 @@ from random import choice
 
 from aiogram.types import CallbackQuery
 
+from src.factories.connector import ConnectorCallbackFactory
+from src.keyboards.checkpoint_arrival import get_arrival_keyboard
+
 from src.libs._renderable import Renderable
 
 
@@ -27,9 +30,13 @@ class CheckpointsConnector(Renderable):
     def __get_phrase(self) -> str:
         return f"{choice(self.NEXT_CHECKPOINT_PHRASES)}: {self.destination_location}"
 
-    async def render(self, callback: CallbackQuery) -> None:
+    async def render(self, callback: CallbackQuery, data: ConnectorCallbackFactory = None) -> None:
         # itinerary_photo = load_photo(self.itinerary_photo_path)
         # await callback.message.answer_photo(itinerary_photo)
 
         phrase = self.__get_phrase()
-        await callback.message.answer(f"{self.itinerary_comment}\n{phrase}")
+
+        arrival_keyboard = get_arrival_keyboard(data.route_id, data.checkpoint_index)
+
+        await callback.message.answer(f"{self.itinerary_comment}\n{phrase}",
+                                      reply_markup=arrival_keyboard)
