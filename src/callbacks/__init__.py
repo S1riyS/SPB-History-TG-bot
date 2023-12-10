@@ -1,0 +1,1 @@
+from .random_value import send_random_value
