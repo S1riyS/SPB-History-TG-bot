@@ -6,6 +6,6 @@ from src.loader import dp
 
 
 @dp.callback_query(F.data == "start_route")
-async def send_random_value(callback: CallbackQuery):
+async def send_starting_route_info(callback: CallbackQuery):
     # await callback.message.answer(// ЗАПУСТИТЬ МАРШРУТ //)
     await callback.answer()
