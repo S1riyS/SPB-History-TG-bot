@@ -1,11 +1,12 @@
 from aiogram.types import CallbackQuery
-from aiogram import F
-from random import randint
 
+from data import ROUTES
+from src.callbacks.factories.start_route import RouteCallbackFactory
 from src.loader import dp
 
 
-@dp.callback_query(F.data == "start_route")
-async def send_starting_route_info(callback: CallbackQuery):
-    # await callback.message.answer(// ЗАПУСТИТЬ МАРШРУТ //)
+@dp.callback_query(RouteCallbackFactory.filter())
+async def send_starting_route_info(callback: CallbackQuery, callback_data: RouteCallbackFactory):
+    current_route = ROUTES[callback_data.route_id]
+    await current_route.render(callback)
     await callback.answer()
