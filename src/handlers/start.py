@@ -2,7 +2,7 @@ from aiogram.filters import CommandStart
 from aiogram.types import Message
 
 from data import ROUTES
-from src.keyboards import get_all_routes
+from src.keyboards.all_routes import get_all_routes
 from src.loader import dp
 
 
