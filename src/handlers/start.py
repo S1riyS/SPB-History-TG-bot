@@ -1,11 +1,9 @@
 from aiogram.filters import CommandStart
-from aiogram.types import Message, InlineKeyboardButton
-from aiogram.utils.keyboard import InlineKeyboardBuilder
-from aiogram.utils.markdown import hbold
+from aiogram.types import Message
 
-from src.loader import dp
-from src.keyboards import get_all_routes
 from data import ROUTES
+from src.keyboards import get_all_routes
+from src.loader import dp
 
 
 @dp.message(CommandStart())
@@ -16,10 +14,6 @@ async def command_start_handler(message: Message) -> None:
 
     description = "Вот наши маршруты:\n"
     for route_id, route_instance in ROUTES.items():
-        description += route_instance.short_info + "\n"
+        description += route_instance.details.brief_description + "\n"
 
-    await message.answer(
-        # Картинка всего маршрута
-        description,
-        reply_markup=all_routes_keyboard
-    )
+    await message.answer(description, reply_markup=all_routes_keyboard)
