@@ -1,6 +1,5 @@
-from data.routes.test_route import Route
+from data.routes.test_route import route as first_route
 
 ROUTES = {
-    0: Route("НУЛЕВОЙ ПУТЬ"),
-    1: Route("первый путь")
+    0: first_route,
 }
