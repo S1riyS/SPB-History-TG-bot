@@ -1,6 +1,10 @@
-from data.routes.test_route import Route
+import typing as t
 
-ROUTES = {
-    0: Route("НУЛЕВОЙ ПУТЬ"),
-    1: Route("первый путь")
+from data.routes.test_route import route as first_route
+
+if t.TYPE_CHECKING:
+    from src.libs.route import Route
+
+ROUTES: t.Dict[int, "Route"] = {
+    0: first_route,
 }
