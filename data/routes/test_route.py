@@ -43,7 +43,7 @@ __checkpoints = [
 route = Route(
     details=RouteDetails(
         name="Тестовое имя",
-        map_photo_path="",
+        map_photo_path="img.png",
         brief_description="Короткое описание маршрута",
         full_description='Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. '
                          'Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. '

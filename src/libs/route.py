@@ -7,6 +7,7 @@ from src.libs._typing import RouteDetails
 from src.libs.checkpoint import Checkpoint
 from src.factories.start_route import RouteCallbackFactory
 from src.factories.connector import ConnectorCallbackFactory
+from src.utils.load_from_static import load_photo
 
 
 class Route(Renderable):
@@ -23,8 +24,8 @@ class Route(Renderable):
         await callback.message.answer(self.details.full_description)
         await callback.message.answer("Лови карту маршрута")
 
-        # map_photo = load_photo(self.details.map_photo_path)
-        # await callback.message.answer_photo(load_photo(map_photo))
+        map_photo = load_photo(self.details.map_photo_path)
+        await callback.message.answer_photo(map_photo)
 
         first_checkpoint_connector = self.checkpoints[0].connector
         connector_data = ConnectorCallbackFactory(route_id=data.route_id, checkpoint_index=0)

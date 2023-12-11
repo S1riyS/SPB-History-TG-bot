@@ -4,6 +4,7 @@ from aiogram.types import Message
 from data import ROUTES
 from src.keyboards.all_routes import get_all_routes
 from src.loader import dp
+from src.utils.load_from_static import load_photo
 
 
 @dp.message(CommandStart())
