@@ -3,8 +3,8 @@ from aiogram.types import CallbackQuery
 from src.factories.checkpoint import CheckpointCallbackFactory
 from src.keyboards.checkpoint_next import get_next_keyboard
 from src.libs._renderable import Renderable
-from src.libs._typing import CheckpointDetails
 from src.libs.checkpoints_connector import CheckpointsConnector
+from src.libs.typing import CheckpointDetails
 
 
 class Checkpoint(Renderable):
