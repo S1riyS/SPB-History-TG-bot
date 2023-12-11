@@ -1,7 +1,7 @@
 from aiogram.utils.keyboard import InlineKeyboardBuilder
 
 from data import ROUTES
-from src.factories.start_route import RouteCallbackFactory
+from src.factories.route import RouteCallbackFactory
 
 
 def get_all_routes():

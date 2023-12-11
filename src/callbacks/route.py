@@ -1,7 +1,7 @@
 from aiogram.types import CallbackQuery
 
 from data import ROUTES
-from src.factories.start_route import RouteCallbackFactory
+from src.factories.route import RouteCallbackFactory
 from src.loader import dp
 
 
