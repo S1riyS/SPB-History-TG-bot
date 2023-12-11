@@ -4,10 +4,10 @@ from aiogram.types import CallbackQuery
 
 from src.factories.connector import ConnectorCallbackFactory
 from src.factories.route import RouteCallbackFactory
-from src.libs._renderable import Renderable
 from src.libs.checkpoint import Checkpoint
 from src.libs.typing import RouteDetails
 from src.utils.load_from_static import load_photo
+from ._renderable import Renderable
 
 
 class Route(Renderable):

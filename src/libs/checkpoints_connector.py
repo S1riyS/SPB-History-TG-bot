@@ -6,7 +6,7 @@ from aiogram.types import CallbackQuery
 
 from src.factories.connector import ConnectorCallbackFactory
 from src.keyboards.checkpoint_arrival import get_arrival_keyboard
-from src.libs._renderable import Renderable
+from ._renderable import Renderable
 
 
 class CheckpointsConnector(Renderable):
