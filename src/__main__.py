@@ -7,6 +7,8 @@ from src.loader import dp
 
 
 async def main() -> None:
+    from src import handlers
+    from src import callbacks
     await dp.start_polling(bot)
 
 
