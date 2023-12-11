@@ -3,7 +3,7 @@ from aiogram.utils.keyboard import InlineKeyboardBuilder
 from src.factories.connector import ConnectorCallbackFactory
 
 
-def get_next_keyboard(route_id: int, checkpoint_index: int):
+def get_next_keyboard(route_id: int, checkpoint_index: int) -> InlineKeyboardBuilder:
     builder = InlineKeyboardBuilder()
     builder.button(
         text='Далее',

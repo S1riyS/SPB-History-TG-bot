@@ -1,8 +1,6 @@
 import asyncio
 import logging
 import sys
-import src.handlers
-import src.callbacks
 
 from src.loader import bot
 from src.loader import dp

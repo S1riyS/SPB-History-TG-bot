@@ -3,7 +3,7 @@ from aiogram.utils.keyboard import InlineKeyboardBuilder
 from src.factories.checkpoint import CheckpointCallbackFactory
 
 
-def get_arrival_keyboard(route_id: int, checkpoint_index: int):
+def get_arrival_keyboard(route_id: int, checkpoint_index: int) -> InlineKeyboardBuilder:
     builder = InlineKeyboardBuilder()
     builder.button(
         text='На месте',

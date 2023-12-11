@@ -1,8 +1,8 @@
-from src.libs._typing import CheckpointDetails
-from src.libs._typing import RouteDetails
 from src.libs.checkpoint import Checkpoint
 from src.libs.checkpoints_connector import CheckpointsConnector
 from src.libs.route import Route
+from src.libs.typing import CheckpointDetails
+from src.libs.typing import RouteDetails
 
 __checkpoints = [
     Checkpoint(

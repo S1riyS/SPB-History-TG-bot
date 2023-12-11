@@ -4,7 +4,7 @@ from data import ROUTES
 from src.factories.route import RouteCallbackFactory
 
 
-def get_all_routes():
+def get_all_routes() -> InlineKeyboardBuilder:
     builder = InlineKeyboardBuilder()
     for route_id, route_instance in ROUTES.items():
         builder.button(
