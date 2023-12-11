@@ -13,7 +13,7 @@ async def send_connector_info(callback: CallbackQuery, callback_data: ConnectorC
     # Checking if checkpoint_index is in range
     if len(current_route.checkpoints) > callback_data.checkpoint_index:
         current_checkpoint = current_route.checkpoints[callback_data.checkpoint_index]
-        await current_checkpoint.connector.render(callback, callback_data)
+        await current_checkpoint.connector.render(callback, data=callback_data)
     # Sending message that route is finished
     else:
         all_routes_keyboard = get_all_routes()

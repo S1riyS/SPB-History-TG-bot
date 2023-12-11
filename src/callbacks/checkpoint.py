@@ -10,6 +10,6 @@ async def send_checkpoint_info(callback: CallbackQuery, callback_data: Checkpoin
     # Retrieving checkpoint object
     current_route = ROUTES[callback_data.route_id]
     current_checkpoint = current_route.checkpoints[callback_data.checkpoint_index]
-    # Sending information about chechpoint to user
-    await current_checkpoint.render(callback, callback_data)
+    # Sending information about checkpoint to user
+    await current_checkpoint.render(callback, data=callback_data)
     await callback.answer()
