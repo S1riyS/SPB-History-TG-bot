@@ -4,9 +4,13 @@ from pathlib import Path
 
 @dataclass
 class RouteDetails:
+    # Name of route
     name: str
+    # Path to photo of full route
     map_photo_path: Path
+    # Brief description that will be shown when user uses /start command
     brief_description: str
+    # Full description that will be shown when user chooses specific route
     full_description: str
 
 
