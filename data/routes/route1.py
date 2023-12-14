@@ -19,13 +19,13 @@ __checkpoints = [
     Checkpoint(
         details=CheckpointDetails(
             name="Графский переулок",
-            photo_path="route1_2_1.jpeg",
+            photo_path="route1_2_1.jpg",
             description="Графский переулок невероятно маленький, протяжённостью с севера на юг всего в 100 метров, а с запада на восток — 300 метров. Здесь только 12 зданий. Этот проезд возник тут в 1739 году. \n Большая достопримечательность Графского переулка дом № 10, где в 1842—1845 годах проживал Фёдор Достоевский и написал роман 'Бедные люди'. \n дом № 5 — доходный дом И. А. Жевержеева 1899 года постройки, в его правой части располагается Малый театр. \n Примечателен дом № 7, построенный в 1932 году по проекту А. А. Оля и официально назывался 'Дом-коммуна инженеров и писателей'. В квартире №32 жила Ольга Бергольц в 1932—1942 годах. \n Дом № 9 — дом барона Б. А. Фредерикса, военного губернатора Санкт-Петербурга в середине 19 века. Построен в 1830 году в стиле классицизма.",
             location="Графский переулок. Метро Владимирская",
         ),
         connector=CheckpointsConnector(
             itinerary_comment="Следующая точка - Ковенский переулок. Идти пешком 22 минуты",
-            itinerary_photo_path="route1_2_2.jpg"
+            itinerary_photo_path="route1_1_2.jpg"
         ),
     ),
     Checkpoint(
@@ -37,7 +37,7 @@ __checkpoints = [
         ),
         connector=CheckpointsConnector(
             itinerary_comment="Следующая точка - Басков переулок. Идти пешком 4 минуты",
-            itinerary_photo_path="route1_3_2.jpg"
+            itinerary_photo_path="route1_2_2.jpg"
         ),
     ),
 
@@ -50,7 +50,7 @@ __checkpoints = [
         ),
         connector=CheckpointsConnector(
             itinerary_comment="Следующая точка - Сапёрный переулок. Идти пешком 3 минуты",
-            itinerary_photo_path="route1_4_2.jpg"
+            itinerary_photo_path="route1_3_2.jpg"
         ),
     ),
 
@@ -63,7 +63,7 @@ __checkpoints = [
         ),
         connector=CheckpointsConnector(
             itinerary_comment="На этом завершаем нашу экскурсии. Отсюда до ближайшей станции метро Чернышевская идти 7 минут.",
-            itinerary_photo_path="route1_5_2.jpg"
+            itinerary_photo_path="route1_4_2.jpg"
         ),
     ),
 ]
