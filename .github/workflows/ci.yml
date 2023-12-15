@@ -54,5 +54,7 @@ jobs:
           file_name: .env
 
       - name: Build
+        env:
+          START_POLLING: false
         run: |
           poetry run python -m src
