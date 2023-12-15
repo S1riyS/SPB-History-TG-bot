@@ -49,4 +49,4 @@ jobs:
 
       - name: Build
         run: |
-          python src/__main__.py
+          python -m src
