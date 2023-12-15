@@ -4,6 +4,7 @@ from src.keyboards.checkpoint_next import get_next_keyboard
 from src.libs.checkpoints_connector import CheckpointsConnector
 from src.libs.typing import CheckpointDetails
 from ._renderable import Renderable
+from ..utils.load_from_static import load_photo
 
 
 class Checkpoint(Renderable):
@@ -19,8 +20,9 @@ class Checkpoint(Renderable):
         """
         callback_data = kwargs.get('data')
 
-        # photo = load_photo(self.details.photo_path)
-        # await callback.message.answer_photo(photo)
+        if self.details.photo_path:
+            photo = load_photo(self.details.photo_path)
+            await callback.message.answer_photo(photo)
 
         next_checkpoint_index = callback_data.checkpoint_index + 1
         next_keyboard = get_next_keyboard(callback_data.route_id, next_checkpoint_index)

@@ -6,6 +6,7 @@ from aiogram.types import CallbackQuery
 
 from src.keyboards.checkpoint_arrival import get_arrival_keyboard
 from ._renderable import Renderable
+from ..utils.load_from_static import load_photo
 
 
 class CheckpointsConnector(Renderable):
@@ -34,13 +35,14 @@ class CheckpointsConnector(Renderable):
         """
         callback_data = kwargs.get('data')
 
-        # itinerary_photo = load_photo(self.itinerary_photo_path)
-        # await callback.message.answer_photo(itinerary_photo)
+        if self.itinerary_photo_path:
+            itinerary_photo = load_photo(self.itinerary_photo_path)
+            await callback.message.answer_photo(itinerary_photo)
 
         phrase = self.__get_phrase()
         arrival_keyboard = get_arrival_keyboard(callback_data.route_id, callback_data.checkpoint_index)
 
         await callback.message.answer(
-            f"{self.itinerary_comment}\n{phrase}",
+            f"{phrase}",
             reply_markup=arrival_keyboard
         )
