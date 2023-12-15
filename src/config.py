@@ -11,3 +11,4 @@ STATIC_DIR = ROOT_DIR / "static"
 # Environment variables
 load_dotenv(ROOT_DIR / ".env")
 TELEGRAM_BOT_TOKEN = os.getenv("BOT_TOKEN", "")
+START_POLLING: bool = os.getenv("START_POLLING", "true") == "true"

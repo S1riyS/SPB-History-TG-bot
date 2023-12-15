@@ -1,0 +1,60 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+env:
+  PYTHON_VERSION: "3.10"
+  POETRY_VERSION: "1.7.1"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Configure Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Install Poetry
+        uses: snok/install-poetry@v1
+        with:
+          version: ${{ env.POETRY_VERSION }}
+          virtualenvs-create: true
+          virtualenvs-in-project: true
+
+      - name: Load cached venv
+        id: cached-poetry-dependencies
+        uses: actions/cache@v2
+        with:
+          path: .venv
+          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
+
+      - name: Install dependencies
+        if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
+        run: poetry install --no-root
+
+      - name: Install libraries
+        run: poetry install
+
+      - name: Activate venv
+        run: source .venv/bin/activate
+
+      - name: Create env file
+        uses: SpicyPizza/create-envfile@v2.0
+        with:
+          envkey_BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+          file_name: .env
+
+      - name: Build
+        env:
+          START_POLLING: false
+        run: |
+          poetry run python -m src
