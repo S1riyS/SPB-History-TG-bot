@@ -49,4 +49,4 @@ jobs:
 
       - name: Build
         run: |
-          python -m src
+          poetry run python -m src
