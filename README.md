@@ -1,4 +1,5 @@
 [![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/S1riyS/SPB-History-TG-bot/master?logo=codefactor&logoColor=959da5&label=Code%20Quality&labelColor=333a41&color=32cb55)](https://www.codefactor.io/repository/github/s1riys/spb-history-tg-bot)
+[![CI](https://github.com/S1riyS/SPB-History-TG-bot/actions/workflows/ci.yml/badge.svg?branch=master&style=flat)](https://github.com/S1riyS/SPB-History-TG-bot/actions/workflows/ci.yml)
 <div id="readme-top"></div>
 
 <br/>
