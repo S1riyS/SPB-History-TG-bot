@@ -7,11 +7,11 @@
     <a href="https://github.com/S1riyS/TutorHub-server">
         <img src="https://i.postimg.cc/Ghy47LtS/image.png" alt="Logo" width="140" height="140">
     </a>
-    <h3 align="center">*Project name*</h3>
+    <h3 align="center">Интерактивные прогулки по Санкт-Петербургу</h3>
 </div>
 
 ## 📝 О проекте
-*Здесь будет подробное описание проекта, его особенности и т.д.*
+Данный проект представляет из себя телеграм-бота для проведения интерактивных прогулок по Санкт-Петербургу. С его помощью можно следовать по предсталенным переходным маршрутом, изучая город с новых сторон.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -42,10 +42,16 @@ poetry install
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## Скриншоты
+<p align="center">
+![Загрузка...](/examples/screen1.png)
+![Загрузка...](/examples/screen2.png)
+![Загрузка...](/examples/screen3.png)
+
+
 ## 🤖 Разработчики
 * **Ankudinov Kirill** - [kirill.ankudinov.94@mail.ru](mailto:kirill.ankudinov.94@mail.ru)
-*  **Kortysh Konstantin**
-*  **Kozitskaya Polina** (hopefully)
+* **Kortysh Konstantin** - [kortkostya222@gmail.com](mailto:kortkostya222@gmail.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
