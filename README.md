@@ -44,10 +44,9 @@ poetry install
 
 ## Скриншоты
 <p align="center">
-![Загрузка...](/examples/screen1.png)
-![Загрузка...](/examples/screen2.png)
-![Загрузка...](/examples/screen3.png)
-
+    <img src="examples/screen1.png" alt="Загрузка..." width="600" height="400">
+    <img src="examples/screen2.png" alt="Загрузка..." width="600" height="400">
+    <img src="examples/screen3.png" alt="Загрузка..." width="600" height="400">
 
 ## 🤖 Разработчики
 * **Ankudinov Kirill** - [kirill.ankudinov.94@mail.ru](mailto:kirill.ankudinov.94@mail.ru)
